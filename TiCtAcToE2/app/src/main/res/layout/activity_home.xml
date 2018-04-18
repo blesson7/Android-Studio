@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/hh"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:textSize="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Human vs Human"
+                android:onClick="gameType"
+                android:id="@+id/human"
+                />
+            <RadioButton
+                android:textSize="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="gameType"
+                android:text="Human vs Computer"
+                android:id="@+id/humanc"
+                />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="300dp"
+            android:layout_centerInParent="true"
+            android:layout_height="300dp"
+            android:layout_above="@+id/hh"
+            app:srcCompat="@drawable/tic" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:id="@+id/threebythree"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:onClick="boardType"
+            android:layout_below="@+id/hh"
+            android:layout_marginTop="48dp"
+            android:layout_centerHorizontal="true"
+            android:text="3x3 Board"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:textSize="24dp"
+            android:id="@+id/fivebyfive"
+            android:layout_below="@+id/threebythree"
+            android:layout_marginTop="12dp"
+            android:onClick="boardType"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="5x5 Board"/>
+
+        <Button
+            android:layout_marginTop="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:onClick="starter"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/fivebyfive"
+            android:text="Start Game"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
